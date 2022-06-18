@@ -13,7 +13,7 @@ class CreateListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('lists', function (Blueprint $table) {
+        Schema::create('todolists', function (Blueprint $table) {
             $table->id();
             $table->text('content');
             $table->timestamp('created_at')->useCurrent()->nullable();$table->timestamp('updated_at')->useCurrent()->nullable(); 
