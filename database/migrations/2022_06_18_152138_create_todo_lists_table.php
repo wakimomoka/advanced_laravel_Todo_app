@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateListsTable extends Migration
+class CreateTodoListsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,21 @@ class CreateListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('todolists', function (Blueprint $table) {
+        Schema::create('todo_lists', function (Blueprint $table) {
             $table->id();
             $table->text('content');
-            $table->timestamp('created_at')->useCurrent()->nullable();$table->timestamp('updated_at')->useCurrent()->nullable(); 
+            $table->timestamp('created_at')->useCurrent()->nullable();
+            $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
-    
+
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-
     public function down()
     {
-        Schema::dropIfExists('lists');
+        Schema::dropIfExists('todo_lists');
     }
 }

@@ -16,7 +16,6 @@ class TodoListController extends Controller
     {
         $form = $request->all();
         todoList::create($form);
-
         return redirect('/');
     }
 }
