@@ -16,8 +16,7 @@ class CreateListsTable extends Migration
         Schema::create('lists', function (Blueprint $table) {
             $table->id();
             $table->text('content');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at'); 
+            $table->timestamp('created_at')->useCurrent()->nullable();$table->timestamp('updated_at')->useCurrent()->nullable(); 
         });
     }
     
